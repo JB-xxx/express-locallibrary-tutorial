@@ -1,0 +1,15 @@
+
+
+p Start eerst een terminal met : mongod
+
+p Start een 2de terminal met : mongo 'mongodb+srv://Mijnvoorraad12:Devoorraad12@voorraadcluster-qwgrl.azure.mongodb.net/mijn_voorraad'
+|   type : show dbs
+|   type : use mijn_voorraad
+
+p   start een 3de terminal en type: mongoimport --db mijn_voorraad --collection customers --file /Users/janbaars/customers.json --jsonArray
+
+p mongoexport --db mydb --collection products --out /Users/janbaars/products.json
+p mongoexport --db mydb --collection products --pretty --out /Users/janbaars/products_pretty.json
+
+p Bij csv export moet je de fieldnames benoemen. Let op dat er een komma maar geen spatie tussen de field namen zit.
+|   mongoexport --db mydb --collection products --type=csv --fields _id,name --out /Users/janbaars/products.csv

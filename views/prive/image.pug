@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+    div(class='col-sm-8 jb-content')
+
+        div.container
+        div.jumbotron
+            h1.display-4 Image Uplaoder
+            p.lead This is a simple application to upload and retrieve images from a database
+            hr.my-4
+        div.nput-group.mb-3
+            div.custom-file
+                input(
+                    type="file"
+                    className="custom-file-input"
+                    id="inputGroupFile01"
+                    aria-describedby="inputGroupFileAddon01"
+                )
+            label.custom-file-label(htmlFor="inputGroupFile01") Choose file
+
+        button.btn.btn-primary(type="button") Upload
+
+        div
+            img(src="/images/upload.png" style="width:600px")
+
+        h4 Een voorbeeld om een foto te uploaden
+        div
+            img(src="/images/upload_voorbeeld.png" style="width:600px")

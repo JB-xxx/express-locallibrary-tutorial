@@ -1,0 +1,124 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+.jb-content {
+  height: 100vh;
+  overflow: scroll;
+}
+
+.jb-sidebar {
+  background-color: azure;
+  padding-right: 0px;
+  height: 100vh;
+}
+
+.jb-sidebar2 {
+  background-color: red;
+  color: #ffffff;
+  padding-right: 0px;
+  height: 100vh;
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  color: #2c3e50;
+  }
+
+  /* Top Menu */
+  .navbar-brand { 
+    color: #000;
+    font-weight: bold;
+    font-family: PT Serif, Serif;
+    text-decoration: none;
+  }
+  nav a { 
+      color: #000;
+      font-size: 16px;
+      font-family: PT Serif, Serif;
+      text-decoration: none;
+  }
+  
+  nav { margin-bottom: 20px; }
+  
+  .navbar-dark .navbar-nav .nav-link { color: #ffffff;}
+  
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+.container-fluid { padding-right: 0px; padding-left: 0px;}
+
+/* De oorspronkelijke */
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 0;
+  padding-left: 15px;
+  list-style: none;
+}
+/* het sitemenu van rihohelp */
+.nav-side-menu { margin-bottom: 30px; margin-top: 5px }
+.nav-side-menu ul, .nav-side-menu li { list-style: none;padding: 0px;margin: 0px;line-height: 35px;cursor: pointer }
+/*.nav-side-menu ul {padding-right: 70px; }*/
+.nav-side-menu .menu-content > li { padding: 6px 0px 0px 0px;/*margin: 0 0px*/ }
+.nav-side-menu ul .sub-menu li, .nav-side-menu li .sub-menu li { background-color:transparent;border:none;line-height:25px;padding-left: 20px }
+.nav-side-menu ul .sub-menu li:hover, .nav-side-menu li .sub-menu li:hover {
+    background-color: gold;
+    color:red;
+    /*-webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.5s ease */
+}
+.nav-side-menu ul .sub-menu li:before { color:white;}
+.nav-side-menu li a {
+  text-decoration: none;
+  color:#007bff;
+  margin-left: 0px;
+  padding-left: 0px
+}
+.nav-side-menu li a i {
+  font-size: 14px;
+  margin-right: 15px;
+  float: right;
+  line-height: 35px;
+}
+.nav-side-menu .menu-content > li > a {
+    display: block;
+}
+.sub-menu > li > a {
+    /*font-family: "museo-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased*/
+    padding-left: 15px;
+}
+.nav-side-menu .menu-content li > a:hover, .nav-side-menu .menu-content li > a:focus {
+    background-color: transparent !important;
+    /*color: rgba(255, 255, 255, 0.5);*/
+    color:green;*/
+    -webkit-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.5s ease
+}
+.nav-side-menu .menu-list .menu-content {
+    display: block
+}
+.menu-list {
+  background-color: skyblue;
+  padding-left: 15px;
+}
+li.jb-divider {
+  margin: 0px;
+  margin-left: -15px;;
+	padding: 0px;
+	border-bottom: 1px solid red;
+	opacity: .3;filter:Alpha(Opacity=30)
+}

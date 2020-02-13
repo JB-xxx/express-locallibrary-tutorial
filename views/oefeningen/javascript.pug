@@ -1,0 +1,54 @@
+extends ../layout
+
+block content
+
+
+    div(class='col-sm-8 jb-content')
+
+        h1= title
+
+        h4= som
+        p= test
+
+        p#demo JavaScript can change HTML content.
+        button(type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"') Click Me!
+        br
+
+        button(onclick="document.getElementById('myImage').src='/images/lamp_aan.gif'") Doe de lamp aan
+        <img id="myImage" src="/images/lamp.gif" style="width:100px">
+        button(onclick="document.getElementById('myImage').src='/images/lamp_uit.gif'") Doe de lamp uit
+
+        p
+            label KKKKKKK
+            input#userLastName(type='text')
+
+        div#demo2
+        br
+        div#demo4
+        br
+        
+
+
+
+    script(type="text/javascript").
+        // demo2
+        var txt = '{"name":"John", "age":30, "city":"New York"}'
+        var obj = JSON.parse(txt);
+        document.getElementById("demo2").innerHTML = obj.name + ", " + obj.age;
+
+
+        // demo4
+        var myObj, i, x = "";
+        myObj = {
+        "name":"John",
+        "age":30,
+        "cars":[ "Ford", "BMW", "Fiat" ]
+        };
+
+        for (i = 0; i < myObj.cars.length; i++) {
+        x += myObj.cars[i] + "<br>";
+        }
+        document.getElementById("demo4").innerHTML = x;
+        
+
+

@@ -1,0 +1,135 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
+    
+    //- link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    //- link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+
+    script(type="text/javascript" src="/javascripts/janbaars.js")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  body
+    div(class='container-fluid')
+      div(class='row')
+        div(class='col-sm-2 jb-sidebar')
+          block sidebar
+            ul(class='sidebar-nav')
+              li 
+                a(href='/catalog') Home
+              li 
+                a(href='/catalog/books') All books
+              li 
+                a(href='/catalog/authors') All authors
+              li 
+                a(href='/catalog/genres') All genres
+              li 
+                a(href='/catalog/bookinstances') All book-instances
+              li 
+                hr
+              li 
+                a(href='/catalog/author/create') Create new author
+              li 
+                a(href='/catalog/genre/create') Create new genre
+              li 
+                a(href='/catalog/book/create') Create new book
+              li 
+                a(href='/catalog/bookinstance/create') Create new book instance (copy)
+            hr
+            div.nav-side-menu
+              div.menu-list
+                ul#menu-content.nav.menu-content.collapse.out
+                  li(data-toggle="collapse" data-target="#voorraad" class="collapsed")
+                    a(href="#") #[i.fas.fa-angle-down] Voorraad #[span.arrow]
+                  li.jb-divider
+                  ul#voorraad.sub-menu.collapse
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/wms/item") Items 
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/wms/magazijn") Magazijnen 
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/wms/voorraad") Voorraad
+                  li(data-toggle="collapse" data-target="#prive" class="collapsed")
+                    a(href="#") #[i.fas.fa-angle-down] Prive #[span.arrow]
+                  li.jb-divider
+                  ul#prive.sub-menu.collapse
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/prive/image") Fotos 
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/prive/payment") Betalingen 
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/prive/paymentgroup") Betalingsgroepen
+                  li(data-toggle="collapse" data-target="#stamgegevens" class="collapsed")
+                    a(href="#") #[i.fas.fa-angle-down] Stamgegevens #[span.arrow]
+                  li.jb-divider
+                  ul#stamgegevens.sub-menu.collapse
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/prive/bootstrap") Bootstrap 
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/prive/layout") Layout testen
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/prive/gridview") Gridview test
+                  li(data-toggle="collapse" data-target="#node" class="collapsed")
+                    a(href="#") #[i.fas.fa-angle-down] Node js #[span.arrow]
+                  li.jb-divider
+                  ul#node.sub-menu.collapse
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page" target="_blank") Express 
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/prive/bootstrap") Morgan 
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="https://momentjs.com/docs/#/displaying/" target="_blank") Moment
+                        a(href="https://devhints.io/moment" target="_blank") Moment2
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="https://medium.com/@osiolabs/use-module-exports-to-keep-node-js-code-organized-9379526ebac8" target="_blank") Module Export
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="https://cloud.mongodb.com/user?n=%2Fv2%2F5d88c58e014b76a0dad32dd4&nextHash=%23clusters%2Fdetail%2FBaLeren#/atlas/login" target="_blank") MongoDB Atlas                                             
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="https://code.tutsplus.com/tutorials/file-upload-with-multer-in-node--cms-32088" target="_blank") Files uploaden                    
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="https://developpaper.com/mongodb-advanced-query/" target="_blank") MongoDB Queries
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="#") Mogoose
+                  li(data-toggle="collapse" data-target="#oefeningen" class="collapsed")
+                    a(href="#") #[i.fas.fa-angle-down] Oefeningen #[span.arrow]
+                  li.jb-divider
+                  ul#oefeningen.sub-menu.collapse
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/prive/javascript") Javascript 
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/prive/document") Document(table) upload                     
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/#") #
+                    li
+                      i.fas.fa-angle-right 
+                      a(href="/#") #                      
+
+        block content

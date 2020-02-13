@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+    div(class='col-sm-8 jb-content')
+    
+        - console.log(payment_list)
+        
+        h1= title
+        
+        ul
+            - payment_list.sort(function(a, b) {let textA = a.description.toUpperCase(); let textB = b.description.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;});
+            each item in payment_list
+                li= item.payment_amount
+                li= item.description
+                li= item.betaal_datum
+                li= item.paymentgroup.name
+            else
+                li There are no payments. 
+
+
+    script(type="text/javascript").
+
+        // console.log(payment_list)

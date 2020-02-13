@@ -1,0 +1,153 @@
+extends ../layout
+
+block content
+  div(class='col-sm-10 jb-content')
+
+    style(type="text/css").
+
+      #mydiv {
+        position: absolute;
+        z-index: 9;
+        background-color: #f1f1f1;
+        text-align: center;
+        border: 1px solid #d3d3d3;
+        width: 160;
+        float:left;
+      }
+
+      #mydivheader {
+        padding: 10px;
+        cursor: move;
+        z-index: 9;
+        background-color: #2196F3;
+        color: #fff;
+      }
+
+      .testbutton {
+        width:200px;
+        float:left;
+        margin-left:180px;
+      }
+
+      .modal-header {
+        height: 32px;
+        bottom: auto;
+        background: #333;
+        padding: 0 8px 0 16px;
+        display: flex;
+        cursor: move;
+      }
+
+      .modal-header h4 {
+        margin: 0;
+        padding: 0;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 32px;
+        color: white;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      button.close {
+        color: #ffffff;
+        opacity: .8;
+      }
+
+      .close:hover {
+        color:red;
+      }
+
+      .modal-footer {
+        padding: .5rem;
+      }
+    
+    h1 Diverse hulpmiddelen en voorbeeld sites.
+    hr
+    a(href="https://pugjs.org/language/includes.html", target="_blank") De Pug Site
+
+    p Deze code werkt alles bij  
+      code pug -w ./ -o ./html -P
+      br 
+      Deze code werkt alleen het betreffende pug bestand bij 
+      code pug index.pug
+
+    hr
+    div Hieronder de link voor goede uitleg over Mongodb
+    a(href="https://www.quackit.com/mongodb/tutorial/mongodb_export_data.cfm" target="_blank") Mongobd voorbeelden
+    |  -- 
+    a(href="https://studio3t.com/knowledge-base/articles/mongodb-collections-beginners-guide/" target="_blank") Mongobd queries Studio 3T
+    |  -- 
+    a(href="https://docs.mongodb.com/compass/master/query-bar/" target="_blank") Mongobd Compass queries
+        hr
+    div Hieronder de link voor goede uitleg over Mongodb Atlas
+    a(href="https://severalnines.com/database-blog/overview-mongodb-atlas-part-one" target="_blank") Mongobd Atlas
+      |  -- 
+    a(href="https://github.com/ozlerhakan/mongodb-json-files" target="_blank") Json mock data
+
+    hr
+    div Hieronder de link voor de bootstrap site
+    a(href="https://getbootstrap.com/docs/4.3/components/navbar/", target="_blank") Bootstrap Site
+  
+    hr
+    div Hieronder een voorbeeld van How to save form data to MongoDB with Node.js
+    a(href="https://www.youtube.com/watch?v=rOfT83_eKWk", target="_blank") Toon de video
+    
+    hr
+    div Hieronder 
+      code W3Schools How To
+      |  veel voorbeelden voor layout en design
+    a(href="https://www.w3schools.com/howto/default.asp", target="_blank") W3 schools
+
+    hr
+    div Hieronder een pug bestand van mijzelf
+    a(href="http://localhost:52330/html/", target="_blank") Pug bestand in janbaars/pug
+
+    hr
+    div Hieronder Axios voorbeeld
+    a(href="https://attacomsian.com/blog/http-requests-axios", target="_blank") Axios voorbeeld
+
+    hr
+    p Klik en hou de muis ingedrukt terwijl je de onderstaande div beweegt
+    
+    div.row
+      div#mydiv
+        div#mydivheader Click here to move
+        p Move
+        p this
+        p DIV
+
+      div.testbutton
+        //- Button to Open the Modal
+        button(type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal") Open modal
+
+    //- The Modal
+    div#myModal(class="modal")
+      div(class="modal-dialog modal-lg")
+        div(class="modal-content")
+    
+          //- Modal Header
+          div(class="modal-header")
+            h4(class="modal-title") Modal Heading
+            button(type="button" class="close" data-dismiss="modal") &times;
+          
+          //- Modal body 
+          div(class="modal-body")
+            include ./modal.pug
+          
+          //- Modal footer
+          //- div(class="modal-footer")
+            //- button(type="button" class="btn btn-sm btn-secondary" data-dismiss="modal" click="gera()") Opslaan
+            //- button(type="button" class="btn btn-sm btn-secondary" data-dismiss="modal") Anuleren
+    
+    div
+      ul
+        each val in [1, 2, 3, 4, 5, 6,7,8,9,10,,a,b,c,d,e,f,g,h,i]
+          li= val
+
+  script(type="text/javascript").
+    loadjscssfile("/stylesheets/bootstrap.css", "css")
+    dragElement(document.getElementById("mydiv"));
+
+    
