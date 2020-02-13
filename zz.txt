@@ -1,0 +1,9 @@
+>heroku config:set MONGODB_URI='mongodb+srv://cooluser:coolpassword@cluster0-mbdj7.mongodb.net/local_library?retryWrites=true'
+
+
+mongodb+srv://MoneybookJan12:MoneybookGera12@baars2-kgzr1.mongodb.net/moneybook
+
+
+mongodb+srv://Localuser:<password>@locallib-ceqqo.mongodb.net/test?retryWrites=true&w=majority
+
+heroku config:set MONGODB_URI='mongodb+srv://Localuser:Localpassword@locallib-ceqqo.mongodb.net/locallibrary?retryWrites=true&w=majority'
