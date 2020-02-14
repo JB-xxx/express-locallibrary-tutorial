@@ -11,7 +11,11 @@ var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" 
 var priveRouter = require('./routes/prive');
 var wmsRouter = require('./routes/wms'); 
 
+var compression = require('compression');
+var helmet = require('helmet');
+
 var app = express();
+app.use(helmet());
 
 //Set up mongoose connection
 var mongoose = require('mongoose');
@@ -34,6 +38,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use(compression()); //Compress all routes
 app.use(express.static(path.join(__dirname, 'public')));
 
 // dit heb ik toegevoegd om dinamisch css en js te laden 
